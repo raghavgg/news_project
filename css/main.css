@@ -1,8 +1,6 @@
 /******************************************************************
 Theme Name: Magazine 
 Description: 
-Author: Colorlib
-Author URI: 
 Version: 1.0
 Created: 
 ******************************************************************/
@@ -3529,4 +3527,29 @@ div.thumbnail_container .overlay-bg {
 }
 .mt-185 {
   margin-top: 120px;
+}
+
+
+
+@media (max-width: 600px) {
+  .sideBar {
+    z-index: 2;
+    height: -webkit-fill-available;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 0px 1px 0px;
+    transition: .5s;
+    width: 233px;
+    left: -234px;
+    top: 170px;;
+  }
+  .left-zero {
+    left: 0px;
+  }
+
+  #show {
+    display: block !important;
+    margin-top: 5px;
+     
+  }
 }

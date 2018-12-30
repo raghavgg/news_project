@@ -95,8 +95,12 @@
             </div>
         </header>
         <div class="container-fluid bg-white" id="main">
-            <div class="row row-offcanvas row-offcanvas-left p-3">
-                <div class="col-md-3 col-lg-2 sidebar-offcanvas mt-4" id="sidebar" role="navigation">
+            <div class="clear">
+                <button id="show" class="btn btn-secondry btn-sm float-right d-none">Admin Menu</button>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 sideBar">
                     <ul class="nav flex-column pl-1">
                         <li class="nav-item"><a class="nav-link link-text-color" href="users.html">Users</a></li>
                         <li class="nav-item">
@@ -141,11 +145,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-9 col-lg-10 main">
-                    <p class="hidden-md-up d-block d-sm-none">
-                        <button type="button" class="btn btn-primary-outline btn-sm .d-xl-none .d-lg-none .d-xl-block" data-toggle="offcanvas"><i class="fa fa-chevron-left"></i> Admin </button>
-                    </p>
+                <div class="col-md-10 content">
                     <div class="col-lg-9 col-md-8">
+                        <div class="container">
                         <h2 class="mb-3 mt-3">Users</h2>
                        
                         </div>
@@ -228,12 +230,5 @@
         <script src="../js/jquery-ui.js"></script>
         <script src="../js/jquery.nice-select.min.js"></script>
         <script src="../js/main.js"></script>
-        <script>
-            $(document).ready(function() {
-              $("[data-toggle=offcanvas]").click(function() {
-                $(".row-offcanvas").toggleClass("active");
-              });
-            });
-        </script>
     </body>
 </html>

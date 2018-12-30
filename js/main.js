@@ -406,3 +406,8 @@ $(document).ready(function() {
 
 });
 
+
+            $('button#show').click(function(){
+               $('.sideBar').toggleClass('left-zero');
+            });
+
