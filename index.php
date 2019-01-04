@@ -102,12 +102,12 @@
 		<!-- <div class=""> -->
 			<div class="col-sm ad-banner">
 				<div class="menu sticky-top bg-light custom-fixed">
-					<div class="mb-30 ml-5"> <img class="img-fluid" src="img/sidebar120.png" alt="" width="100%"> your adv goes here </div>
+					<div class="mb-30 ml-5 fullpage-ad"> <img class="img-fluid" src="img/sidebar120.png" alt="" width="100%"> your adv goes here </div>
             	</div>
 			</div>
 		<!-- </div> -->
 		<!-- End banner-ads Area -->
-		<div class="col-sm-9">
+		<div class="col-sm-9 m-auto">
 			<section class="top-post-area pt-10">
 				<div class="no-padding">
 					<!-- Start banner-ads Area -->
@@ -358,7 +358,7 @@
 							</div>
 							<!-- End latest-post Area -->
 							<!-- Start banner-ads Area -->
-							<div class="col-lg-12 ad-widget-wrap mt-30 mb-30"> <img class="img-fluid" src="img/i1.jpg" alt=""> your adv goes here </div>
+							<div class="col-lg-12 ad-widget-wrap mt-30 mb-30 fullpage-ad"> <img class="img-fluid" src="img/i1.jpg" alt=""> your adv goes here </div>
 							<!-- End banner-ads Area -->
 							<!-- Start popular-post Area -->
 							<div class="popular-post-wrap">
@@ -604,7 +604,7 @@
 				</div>
 			</div>
 			<div class="footer-bottom row align-items-center">
-				<p class="footer-text m-0 col-lg-8 col-md-12"> Copyright &copy; 2018 </p>
+				<p class="footer-text m-0 col-lg-8 col-md-12"> <!-- &copy; --> © 2019 Mmirwa Knowledge All Rights Reserved </p>
 				<div class="col-lg-4 col-md-12 footer-social"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-behance"></i></a> </div>
 			</div>
 		</div>
