@@ -1,5 +1,6 @@
 <?php
 $server = "http://localhost/news_project";
+include_once("../../common/common.php");
 ?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
