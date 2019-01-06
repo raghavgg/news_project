@@ -3678,6 +3678,6 @@ div.thumbnail_container .overlay-bg {
   color: white;
 }
 
-.pagination a:hover:not(.active) {background-color: #f6214b;}
+.pagination a:hover:not(.active) {background-color: #ecf0f1;}
 
 /*pagination styling ends*/
