@@ -147,7 +147,7 @@ a, a:focus, a:hover {
  *  Typography
  *
  **/
-.btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
+ .btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
   font-size: 1em;
   line-height: inherit;
 }
@@ -213,7 +213,7 @@ td, th {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clear::before, .clear::after {
+ .clear::before, .clear::after {
   content: " ";
   display: table;
 }
@@ -1019,9 +1019,9 @@ header {
 }
 
 .menu-center {
-    margin-left: 10em;
-    margin-right: 10em;
-    width: auto;
+  margin-left: 10em;
+  margin-right: 10em;
+  width: auto;
 }
 
 /* Nav Menu Arrows */
@@ -3326,8 +3326,8 @@ div.thumbnail_container .overlay-bg {
 
 .img 
 {
-    display: block !important;
-    margin: 0 auto !important;
+  display: block !important;
+  margin: 0 auto !important;
 }
 .wrapper
 {
@@ -3363,57 +3363,57 @@ div.thumbnail_container .overlay-bg {
 }
 
 .modal-btn {
-    color: #fff;
-    background-color: #153244;
-    border-color: #153244;
+  color: #fff;
+  background-color: #153244;
+  border-color: #153244;
 }
 .align-center {
-    display: block;
-    margin: 0 auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
+  display: block;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
 }
 .image-full {
   width: 100%;
 }
 .bg-1 {
-    background-color: #2f6288;
-    color: white;
-    width: 100%;
-    margin: auto;
-    height: 3em;
-    padding: 10px;
-    margin-bottom: 2em;
+  background-color: #2f6288;
+  color: white;
+  width: 100%;
+  margin: auto;
+  height: 3em;
+  padding: 10px;
+  margin-bottom: 2em;
 }
 
 .vacancy-bar {
-    background-color: white;
-    padding: 2em;
+  background-color: white;
+  padding: 2em;
 }
 
 .categories-bar {
-    background-color: white;
-    padding: 2em;
+  background-color: white;
+  padding: 2em;
 }
 .emp-space
 {
   justify-content: space-around;
 }
 .tabs {
-    justify-content: space-evenly;
-    color: #2f6288;
-    font-size: x-large;
+  justify-content: space-evenly;
+  color: #2f6288;
+  font-size: x-large;
 }
 .location {
-    width: 50%;
+  width: 50%;
 }
 .keywords {
-    width: 50%;
+  width: 50%;
 }
 .tabs {
-    width:100%;
-    margin: auto;
+  width:100%;
+  margin: auto;
 }
 .col {
   width: 35%;
@@ -3440,12 +3440,12 @@ div.thumbnail_container .overlay-bg {
   }
 }
 .details {
-    width: 100%;
+  width: 100%;
 }
 .details-display {
-    clear: left;
-    height: 0;
-    display: contents;
+  clear: left;
+  height: 0;
+  display: contents;
 }
 .hr-new {
   border-top: 1px solid #0000002b;
@@ -3454,27 +3454,27 @@ div.thumbnail_container .overlay-bg {
   line-height: 29px;
 }
 .has-search .form-control-feedback {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    width: 2.375rem;
-    height: 2.375rem;
-    line-height: 2.375rem;
-    text-align: center;
-    pointer-events: none;
-    color: #aaa;
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
 }
 .has-search .form-control {
-    padding-left: 2.375rem;
+  padding-left: 2.375rem;
 }
 .accordion .card-header:after {
-    font-family: 'FontAwesome';  
-    content: "\f068";
-    float: right; 
+  font-family: 'FontAwesome';  
+  content: "\f068";
+  float: right; 
 }
 .accordion .card-header.collapsed:after {
-    /* symbol for "collapsed" panels */
-    content: "\f067"; 
+  /* symbol for "collapsed" panels */
+  content: "\f067"; 
 }
 .card-header {
   background-color: rgba(0, 0, 0, 0) !important;
@@ -3505,9 +3505,9 @@ div.thumbnail_container .overlay-bg {
   }
 }
 .card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
+ background-color: white;
+ padding: 20px;
+ margin-top: 20px;
 }
 /* Fake image */
 .fakeimg {
@@ -3516,7 +3516,7 @@ div.thumbnail_container .overlay-bg {
   padding: 20px;
 }
 .top-margin {
-    margin-top: 5px !important;
+  margin-top: 5px !important;
 }
 .bg-white {
   background-color: white;
@@ -3550,7 +3550,7 @@ div.thumbnail_container .overlay-bg {
   #show {
     display: block !important;
     margin-top: 5px;
-     
+
   }
 }
 .fullpage-ad {
@@ -3613,7 +3613,7 @@ div.thumbnail_container .overlay-bg {
 .profile-userbuttons .btn:last-child {
   margin-right: 0px;
 }
-    
+
 .profile-usermenu {
   margin-top: 30px;
 }
@@ -3681,3 +3681,26 @@ div.thumbnail_container .overlay-bg {
 .pagination a:hover:not(.active) {background-color: #ecf0f1;}
 
 /*pagination styling ends*/
+
+.admin-dialog {
+  /* display: inline-block; */
+  text-align: left;
+  margin-left: auto;
+  vertical-align: middle;
+  display: table;
+  margin-right: auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.125);
+  border: 1px solid rgba(0,0,0,0.45);
+  margin-top: 7em;
+}
+.blue-button {
+  background-color: #3c6b9d !important;
+  border-color: #446d99 !important;
+}
+.client-logo {
+  width: 10%;
+  margin: 0 auto 1rem;
+  height: 10%;
+  /*display: block;*/
+}
