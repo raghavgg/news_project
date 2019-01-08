@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+        <link rel="stylesheet" href="../../css/sweetalert.min.css">
     </head>
     <body>
         <header>
@@ -149,6 +150,8 @@
                     <div class="col-lg-9 col-md-8">
                         <div class="container">
                             <h2 class="mb-3 mt-3">Create News</h2>
+                        <button class="error">Error</button>
+                        <button class="success">Success</button>
                             <form action="/action_page.php">
                                 <div class="form-group">
                                     <label for="title">Title :</label>
@@ -303,6 +306,15 @@
         <script src="../../js/jquery.magnific-popup.min.js"></script>
         <script src="../../js/jquery-ui.js"></script>
         <script src="../../js/jquery.nice-select.min.js"></script>
+        <script src="../../js/sweetalert.min.js"></script>
         <script src="../../js/main.js"></script>
+        <script type="text/javascript">
+            $(".error").click(function() {
+              sweetAlert("Oops...", "Something went wrong!", "error");
+            });
+            $(".success").click(function() {
+              sweetAlert("Great...", "News blog is created", "success");
+            });
+        </script>
     </body>
 </html>
