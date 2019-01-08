@@ -60,7 +60,7 @@ include_once("../../common/common.php");
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-4 col-md-4 col-sm-12 logo-left no-padding">
-                            <a href="index.html"> <img class="img-fluid" src="../img/logo.png" alt=""> </a>
+                            <a href="index.html"> <img class="img-fluid" src="<?php echo $server; ?>/img/logo.png" alt=""> </a>
                         </div>
                         <!-- <div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">
                             <img class="img-fluid" src="img/banner-ad.jpg" alt="">

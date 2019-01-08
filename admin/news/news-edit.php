@@ -1,8 +1,20 @@
 <?php
 	include_once("./../common/header.php");
+    $id = isset($_GET['id'])?$_GET['id']:0;
+    try{
+        $news = new News();
+        $newsArray = $news->getNewsDetail($id);
+        if(empty($newsArray)){
+            $news->redirect("./news.php");
+            exit;
+        }
+    }catch(Exception $e){
+        // Error
+        $news->redirect("./news.php");
+        exit;
+    }
 ?>
 
-<link rel="stylesheet" href="<?php echo $server; ?>/css/sweetalert.min.css">
 <div class="container-fluid bg-white p-3" id="main">
             <div class="clear">
                 <button id="show" class="btn btn-secondry btn-sm float-right d-none">Admin Menu</button>
@@ -21,15 +33,15 @@
                             <form action="./action/news-create.php" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="title">Title :</label>
-                                    <input type="text" class="form-control" id="title" name="title" required="">
+                                    <input type="text" class="form-control" id="title" name="title" value="<?php echo $newsArray['title']; ?>" required="">
                                 </div>
                                 <div class="form-group">
                                     <label for="sub-title">Sub Title :</label>
-                                    <input type="text" class="form-control" id="sub-title" name="sub_title" required="">
+                                    <input type="text" class="form-control" id="sub-title" name="sub_title" value="<?php echo $newsArray['subtitle']; ?>" required="">
                                 </div>
                                 <div class="form-group">
                                     <label for="text">Text :</label>
-                                    <textarea class="form-control" rows="5" id="text" name="text"></textarea>
+                                    <textarea class="form-control" rows="5" id="text" name="text"><?php echo $newsArray['text']; ?></textarea>
                                 </div>
                                 <div class="custom-file mb-3">
                                     <input type="file" class="custom-file-input" id="customFile" name="filenameBig" required="">
@@ -41,7 +53,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="views">Youtube URL :</label>
-                                    <input type="text" class="form-control" id="views" name="youtube_url">
+                                    <input type="text" class="form-control" id="views" name="youtube_url"  value="<?php echo $newsArray['youtube_video_url']; ?>">
                                 </div>
                                 <?php
                                 	try{
@@ -88,42 +100,7 @@
                 </div>
             </div>
         </div>
-<script src="<?php echo $server; ?>/js/sweetalert.min.js"></script>
-<script type="application/x-javascript"> 
-function getUrlValue(varName) {
-			var split = $(location).attr('href').split('?');
-			var value = '';
-			if (split.length == 2) {
-				split = split[1].split('&');
-				for (var i = 0; i < split.length; i+=1) {
-					var keyValue = split[i].split('=');
-					if (keyValue.length == 2 && keyValue[0] == varName) {
-						value = keyValue[1];
-						break;
-					}
-				}
-			}
-				return value;
-			}
-			
-function alertfunction()
-{
-	var status = getUrlValue("status");
-	var message = getUrlValue("message");
-	message = decodeURI(message);
-	if(status=='fail')
-	{
-		sweetAlert("Oops...", message, "error");
-	}
-	if(status=='success')
-	{
-		sweetAlert("Great...", "News created successfully!", "success");
-	}
-}
 
-addEventListener("load", function() { alertfunction(); }, false);
-
-</script>
 <?php
 	include_once("./../../common/footer.php");
 ?>

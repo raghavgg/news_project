@@ -29,6 +29,7 @@ class Common
 					$response = curl_exec($curl);
 					$err = curl_error($curl);
 					curl_close($curl);
+					//print_r($err);
 
 					if ($err) {
 					  	return false;
@@ -39,8 +40,16 @@ class Common
 
 			}
 	}
-}
 
+	public function redirect($url)
+	{
+	    $string = '<script type="text/javascript">';
+	    $string .= 'window.location = "' . $url . '"';
+	    $string .= '</script>';
+
+	    echo $string;
+	}
+}
 
 /**
  * 
@@ -67,6 +76,24 @@ class News extends Common
 		$response = $this->callUrl("/api/v1/session/news/create", $postFields, 'POST');
 		if($response['statusCode'] == 201){
 			return true;
+		}else{
+			return false;
+		}
+	}
+
+	public function getNews($limit=10, $page=1){
+		$response = $this->callUrl("/api/v1/session/news?records_per_page=".$limit."&page_number=".$page);
+		if($response['statusCode'] == 200){
+			return $response['data'];
+		}else{
+			return false;
+		}
+	}
+
+	public function getNewsDetail($id){
+		$response = $this->callUrl("/api/v1/session/news/".$id);
+		if($response['statusCode'] == 200){
+			return $response['data'];
 		}else{
 			return false;
 		}
