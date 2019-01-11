@@ -53,38 +53,36 @@
                     </ul>
                 </div>
                 <div class="col-md-10 content">
-                    <div class="col-lg-9 col-md-8">
-                        <div class="container">
-                            <h2 class="mb-3 mt-3">Create Category</h2>
-                            <form action="/action_page.php">
-                                <div class="form-group">
-                                    <label for="category">Category Name :</label>
-                                    <input type="text" class="form-control" id="category" name="category">
+                    <div class="container">
+                        <h2 class="mb-3 mt-3">Create Category</h2>
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <label for="category">Category Name :</label>
+                                <input type="text" class="form-control" id="category" name="category">
+                            </div>
+                            <div class="custom-file mb-3">
+                                <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                <label class="custom-file-label" for="customFile">Choose Picture</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="views">Youtube URL :</label>
+                                <input type="text" class="form-control" id="views" name="views">
+                            </div>
+                            <div class="form-group">
+                                <label>Status : </label>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="status">Active
+                                    </label>
                                 </div>
-                                <div class="custom-file mb-3">
-                                    <input type="file" class="custom-file-input" id="customFile" name="filename">
-                                    <label class="custom-file-label" for="customFile">Choose Picture</label>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="status">Inactive
+                                    </label>
                                 </div>
-                                <div class="form-group">
-                                    <label for="views">Youtube URL :</label>
-                                    <input type="text" class="form-control" id="views" name="views">
-                                </div>
-                                <div class="form-group">
-                                    <label>Status : </label>
-                                    <div class="form-check-inline">
-                                        <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="status">Active
-                                        </label>
-                                    </div>
-                                    <div class="form-check-inline">
-                                        <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="status">Inactive
-                                        </label>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

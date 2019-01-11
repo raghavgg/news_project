@@ -46,7 +46,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-right no-padding">
                             <ul>
                                 <li><a href="tel:+440 012 3654 896"><span class="fa fa-phone"></span><span> +123 4567890</span></a></li>
-                                <li><a href=""><span class="fa fa-envelope"></span><span> magazines@gmail.com</span></a></li>
+                                <li><a href=""><span class="fa fa-envelope"></span><span> informed@gmail.com</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -146,38 +146,36 @@
                     </ul>
                 </div>
                 <div class="col-md-10 content">
-                    <div class="col-lg-9 col-md-8">
-                        <div class="container">
-                            <h2 class="mb-3 mt-3">Create Category</h2>
-                            <form action="/action_page.php">
-                                <div class="form-group">
-                                    <label for="category">Category Name :</label>
-                                    <input type="text" class="form-control" id="category" name="category">
+                    <div class="container">
+                        <h2 class="mb-3 mt-3">Create Category</h2>
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <label for="category">Category Name :</label>
+                                <input type="text" class="form-control" id="category" name="category">
+                            </div>
+                            <div class="custom-file mb-3">
+                                <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                <label class="custom-file-label" for="customFile">Choose Picture</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="views">Youtube URL :</label>
+                                <input type="text" class="form-control" id="views" name="views">
+                            </div>
+                            <div class="form-group">
+                                <label>Status : </label>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="status">Active
+                                    </label>
                                 </div>
-                                <div class="custom-file mb-3">
-                                    <input type="file" class="custom-file-input" id="customFile" name="filename">
-                                    <label class="custom-file-label" for="customFile">Choose Picture</label>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="status">Inactive
+                                    </label>
                                 </div>
-                                <div class="form-group">
-                                    <label for="views">Youtube URL :</label>
-                                    <input type="text" class="form-control" id="views" name="views">
-                                </div>
-                                <div class="form-group">
-                                    <label>Status : </label>
-                                    <div class="form-check-inline">
-                                        <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="status">Active
-                                        </label>
-                                    </div>
-                                    <div class="form-check-inline">
-                                        <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="status">Inactive
-                                        </label>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

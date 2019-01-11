@@ -55,7 +55,6 @@
                     </ul>
                 </div>
                 <div class="col-md-10 content">
-                    <div class="col-lg-9 col-md-8">
                         <div class="container">
                         <h2 class="mb-3 mt-3">Users</h2>
                         <div class="table-responsive">
@@ -171,7 +170,6 @@
                             </table>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
 
