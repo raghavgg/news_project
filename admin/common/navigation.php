@@ -1,6 +1,6 @@
 <div class="col-md-2 sideBar">
                     <ul class="nav flex-column pl-1">
-                        <li class="nav-item"><a class="nav-link link-text-color" href="../users.html">Users</a></li>
+                        <li class="nav-item"><a class="nav-link link-text-color" href="<?php echo $server; ?>/admin/users.html">Users</a></li>
                         <li class="nav-item">
                             <a class="nav-link link-text-color" href="#submenu1" data-toggle="collapse" data-target="#submenu1">News ▾</a>
                             <ul class="list-unstyled flex-column pl-3 collapse" id="submenu1" aria-expanded="false">

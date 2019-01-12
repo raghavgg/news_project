@@ -6,6 +6,7 @@
 class Common
 {
 	public $apiServerName = "http://127.0.0.1:8000";
+	public $server = "http://localhost/news_project";
 
 	public function callUrl($callingUrl, $postFields= array(), $type ="GET"){
 			try{
@@ -92,6 +93,22 @@ class News extends Common
 
 	public function getNewsDetail($id){
 		$response = $this->callUrl("/api/v1/session/news/".$id);
+		if($response['statusCode'] == 200){
+			return $response['data'];
+		}else{
+			return false;
+		}
+	}
+}
+
+/**
+ * 
+ */
+class Admin extends Common
+{
+	
+	public function checkAdmin($postFields){
+		$response = $this->callUrl("/api/v1/session/admin/login", $postFields, 'POST');
 		if($response['statusCode'] == 200){
 			return $response['data'];
 		}else{

@@ -87,41 +87,7 @@
             </div>
         </div>
 <script src="<?php echo $server; ?>/js/sweetalert.min.js"></script>
-<script type="application/x-javascript"> 
-function getUrlValue(varName) {
-			var split = $(location).attr('href').split('?');
-			var value = '';
-			if (split.length == 2) {
-				split = split[1].split('&');
-				for (var i = 0; i < split.length; i+=1) {
-					var keyValue = split[i].split('=');
-					if (keyValue.length == 2 && keyValue[0] == varName) {
-						value = keyValue[1];
-						break;
-					}
-				}
-			}
-				return value;
-			}
-			
-function alertfunction()
-{
-	var status = getUrlValue("status");
-	var message = getUrlValue("message");
-	message = decodeURI(message);
-	if(status=='fail')
-	{
-		sweetAlert("Oops...", message, "error");
-	}
-	if(status=='success')
-	{
-		sweetAlert("Great...", "News created successfully!", "success");
-	}
-}
 
-addEventListener("load", function() { alertfunction(); }, false);
-
-</script>
 <?php
 	include_once("./../../common/footer.php");
 ?>
