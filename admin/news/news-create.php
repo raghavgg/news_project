@@ -1,5 +1,9 @@
 <?php
+	session_start();
 	include_once("./../common/header.php");
+	include_once("./../common/common.php");
+	$news = new News();
+	$news->checkAdminLogin();
 ?>
 
 <link rel="stylesheet" href="<?php echo $server; ?>/css/sweetalert.min.css">
@@ -17,7 +21,7 @@
                 <div class="col-md-10 content">
                     <div class="container">
                         <h2 class="mb-3 mt-3">Create News</h2>
-                        <form action="./action/news-create.php" method="post" enctype="multipart/form-data">
+                        <form action="./../action/news-create.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="title">Title :</label>
                                 <input type="text" class="form-control" id="title" name="title" required="">

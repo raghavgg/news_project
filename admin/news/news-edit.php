@@ -1,5 +1,7 @@
 <?php
+    session_start();
 	include_once("./../common/header.php");
+    include_once("./common/check-login.php");
     $id = isset($_GET['id'])?$_GET['id']:0;
     try{
         $news = new News();
@@ -29,7 +31,7 @@
                 <div class="col-md-10 content">
                     <div class="container">
                         <h2 class="mb-3 mt-3">Create News</h2>
-                        <form action="./action/news-create.php" method="post" enctype="multipart/form-data">
+                        <form action="./../action/news-update.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="title">Title :</label>
                                 <input type="text" class="form-control" id="title" name="title" value="<?php echo $newsArray['title']; ?>" required="">
@@ -43,16 +45,17 @@
                                 <textarea class="form-control" rows="5" id="text" name="text"><?php echo $newsArray['text']; ?></textarea>
                             </div>
                             <div class="custom-file mb-3">
-                                <input type="file" class="custom-file-input" id="customFile" name="filenameBig" required="">
+                                <input type="file" class="custom-file-input" id="customFile" name="filenameBig">
                                 <label class="custom-file-label" for="customFile">Choose file Big</label>
                             </div>
                             <div class="custom-file mb-3">
-                                <input type="file" class="custom-file-input" id="customFile" name="filenameSmall" required="">
+                                <input type="file" class="custom-file-input" id="customFile" name="filenameSmall">
                                 <label class="custom-file-label" for="customFile">Choose file Small</label>
                             </div>
                             <div class="form-group">
                                 <label for="views">Youtube URL :</label>
                                 <input type="text" class="form-control" id="views" name="youtube_url"  value="<?php echo $newsArray['youtube_video_url']; ?>">
+                                <input type="hidden" class="form-control" id="views" name="id"  value="<?php echo $newsArray['id']; ?>">
                             </div>
                             <?php
                             	try{
@@ -71,7 +74,11 @@
                                     	<option value="0">Select Category</option>
                                     	<?php
                                     		foreach($categoryArray as $categoryArr){
-                                    			echo "<option value=\"".$categoryArr['id']."\">".$categoryArr['name']."</option>";
+                                                $current = "";
+                                                if($newsArray['news_category_id'] == $categoryArr['id']){ 
+                                                    $current = "selected"; 
+                                                }
+                                    			echo "<option value=\"".$categoryArr['id']."\" ".$current.">".$categoryArr['name']."</option>";
                                     		}
                                     	?>
                                     	
@@ -83,12 +90,12 @@
                                 <label>Status : </label>
                                 <div class="form-check-inline">
                                     <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="status" value="1" checked="">Active
+                                    <input type="radio" class="form-check-input" name="status" value="1" <?php echo $newsArray['status'] == 1?"checked=\"\"":"" ?>>Active
                                     </label>
                                 </div>
                                 <div class="form-check-inline">
                                     <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="status" value="0">Inactive
+                                    <input type="radio" class="form-check-input" name="status" value="0" <?php echo $newsArray['status'] == 0?"checked=\"\"":"" ?>>Inactive
                                     </label>
                                 </div>
                             </div>
